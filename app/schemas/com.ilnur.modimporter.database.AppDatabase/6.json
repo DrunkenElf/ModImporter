@@ -1,0 +1,59 @@
+{
+  "formatVersion": 1,
+  "database": {
+    "version": 6,
+    "identityHash": "f09fd1100b32fdf7fce2bfcf72cd8abc",
+    "entities": [
+      {
+        "tableName": "mods",
+        "createSql": "CREATE TABLE IF NOT EXISTS `${TABLE_NAME}` (`filename` TEXT NOT NULL, `title` TEXT NOT NULL, `desc` TEXT NOT NULL, `imgPath` TEXT NOT NULL, `isFave` INTEGER NOT NULL, PRIMARY KEY(`filename`, `title`))",
+        "fields": [
+          {
+            "fieldPath": "filename",
+            "columnName": "filename",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "title",
+            "columnName": "title",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "desc",
+            "columnName": "desc",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "imgPath",
+            "columnName": "imgPath",
+            "affinity": "TEXT",
+            "notNull": true
+          },
+          {
+            "fieldPath": "isFave",
+            "columnName": "isFave",
+            "affinity": "INTEGER",
+            "notNull": true
+          }
+        ],
+        "primaryKey": {
+          "columnNames": [
+            "filename",
+            "title"
+          ],
+          "autoGenerate": false
+        },
+        "indices": [],
+        "foreignKeys": []
+      }
+    ],
+    "views": [],
+    "setupQueries": [
+      "CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)",
+      "INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, 'f09fd1100b32fdf7fce2bfcf72cd8abc')"
+    ]
+  }
+}

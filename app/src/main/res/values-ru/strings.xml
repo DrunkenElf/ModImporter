@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="btn_download">Скачать</string>
+    <string name="btn_downloading">Скачивание</string>
+    <string name="btn_install">Установить</string>
+    <string name="btn_installed">Установлено</string>
+
+    <string name="bottom_mods">Моды</string>
+    <string name="bottom_fave">Избранное</string>
+
+    <string name="splash_loading">Loading</string>
+</resources>

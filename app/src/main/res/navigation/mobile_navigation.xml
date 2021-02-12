@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.ilnur.modimporter.ui.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_nav_home_to_nav_modinfo"
+            app:destination="@id/navigation_modinfo"
+            />
+        <action
+            android:id="@+id/action_nav_home_to_nav_notif"
+            app:destination="@id/navigation_favourites"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_favourites"
+        android:name="com.ilnur.modimporter.ui.favourites.FavouritesFragment"
+        android:label="@string/title_notifications"
+        tools:layout="@layout/fragment_favourites" />
+
+    <fragment
+        android:id="@+id/navigation_modinfo"
+        android:name="com.ilnur.modimporter.ui.modinfo.ModinfoFragment"
+        tools:layout="@layout/fragment_modinfo">
+
+        <action
+            android:id="@+id/action_nav_modinfo_to_nav_notif"
+            app:destination="@id/navigation_favourites"
+            />
+
+
+        <argument
+            android:name="filename"
+            app:argType="string"
+            app:nullable="false"/>
+
+    </fragment>
+</navigation>
