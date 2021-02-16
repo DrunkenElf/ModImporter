@@ -13,6 +13,7 @@
     <string name="btn_install">Install</string>
     <string name="btn_installed">Installed</string>
 
+    <string name="exit_msg">Press back again to exit</string>
 
     <string name="bottom_mods">Mods</string>
     <string name="bottom_fave">Favourite</string>

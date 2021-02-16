@@ -8,5 +8,7 @@
     <string name="bottom_mods">Моды</string>
     <string name="bottom_fave">Избранное</string>
 
+    <string name="exit_msg">Нажмите Назад еще раз, чтобы выйти</string>
+
     <string name="splash_loading">Loading</string>
 </resources>
