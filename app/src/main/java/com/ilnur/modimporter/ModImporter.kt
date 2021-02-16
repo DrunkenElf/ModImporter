@@ -10,6 +10,6 @@ class ModImporter: Application() {
 
     override fun onCreate() {
         super.onCreate()
-        System.setProperty(DEBUG_PROPERTY_NAME, DEBUG_PROPERTY_VALUE_ON)
+            //System.setProperty(DEBUG_PROPERTY_NAME, DEBUG_PROPERTY_VALUE_ON)
     }
 }

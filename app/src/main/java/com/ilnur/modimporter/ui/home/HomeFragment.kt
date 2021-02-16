@@ -34,11 +34,11 @@ class HomeFragment : Fragment() {
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         //  homeViewModel =
         //     ViewModelProvider(this).get(HomeViewModel::class.java)
         _binding = FragmentHomeBinding.inflate(inflater, container, false)
-        val view = binding.root
+        //val view = binding.root
 
         homeViewModel.mods.observe(viewLifecycleOwner, {
             binding.recyclerHome.adapter = ModsAdapter(
@@ -69,7 +69,7 @@ class HomeFragment : Fragment() {
 
     private fun selectedMod(mod: ModInfo) {
         homeViewModel.push(mod)
-        Toast.makeText(context, "selected ${mod.filename}", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, "selected ${mod.filename}", Toast.LENGTH_SHORT).show()
         if (ContextCompat.checkSelfPermission(
                 requireActivity(),
                 Manifest.permission.WRITE_EXTERNAL_STORAGE

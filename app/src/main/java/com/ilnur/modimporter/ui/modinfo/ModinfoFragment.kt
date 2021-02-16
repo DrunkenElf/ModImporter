@@ -67,7 +67,7 @@ class ModinfoFragment : Fragment() {
             //binding.btnInstall.text = if (it.isFave) resources.getString(R.string.) else "install"
             binding.btnInstall.text = resources.getString(R.string.btn_download)
             binding.btnInstall.setOnClickListener {
-                Toast.makeText(requireContext(), "btn clicked", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(requireContext(), "btn clicked", Toast.LENGTH_SHORT).show()
                 when (binding.btnInstall.text) {
                     resources.getString(R.string.btn_install) -> {
                         if (isPackageInstalled(minePackage, context?.packageManager))

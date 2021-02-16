@@ -32,11 +32,11 @@ class ModsAdapter(
         holder.like.setOnThumbUp {
             //add to favorites
             if (it) {
-                Toast.makeText(context, "liked", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "liked", Toast.LENGTH_SHORT).show()
                 likeListener(modsInfo[position].copy(isFave = true))
             }
             else {
-                Toast.makeText(context, "unliked", Toast.LENGTH_SHORT).show()
+                //Toast.makeText(context, "unliked", Toast.LENGTH_SHORT).show()
                 likeListener(modsInfo[position].copy(isFave = false))
             }
         }
